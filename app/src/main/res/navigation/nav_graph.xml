@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tokenFragment">
+
+    <fragment
+        android:id="@+id/tokenFragment"
+        android:name="com.blacklimon.landing_seeker.profile.TokenFragment"
+        android:label="fragment_token"
+        tools:layout="@layout/fragment_token" >
+        <action
+            android:id="@+id/action_tokenFragment_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/tokenFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.blacklimon.landing_seeker.jobs.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
